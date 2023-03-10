@@ -1,8 +1,13 @@
 import React from 'react'
+import { Navbar } from './components'
+import { Feed } from './pages'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div className='bg-primary'>
+      <Navbar />
+      <Feed />
+    </div>
   )
 }
 
