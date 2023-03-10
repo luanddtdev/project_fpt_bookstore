@@ -4,7 +4,7 @@ import { FiSearch } from 'react-icons/fi'
 
 const Navbar = () => {
     return (
-        <div className={`${styles.paddingX} py-6 shadow-navbar`}>
+        <div className={`${styles.paddingX} py-6 shadow-navbar sticky top-0 bg-primary`}>
             <div className={`${styles.innerWidth} mx-auto flex justify-between items-center`}>
                 <h2 className='font-extrabold text-[24px] text-secondary uppercase'>
                     FPT BOOK

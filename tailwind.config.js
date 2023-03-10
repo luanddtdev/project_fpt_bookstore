@@ -8,7 +8,8 @@ module.exports = {
         'secondary': '#D4B996FF'
       },
       boxShadow: {
-        'navbar': '0 5px 10px #D4B996FF'
+        'navbar': '0 5px 10px #D4B996FF',
+        'card': '0 5px 5px rgba(212, 185, 150, 0.5)'
       }
     },
   },
