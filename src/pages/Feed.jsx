@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { styles } from '../sass'
 import { fetchFromAPI } from '../api'
-import { Card } from '../components'
+import { Card, Modal } from '../components'
 
 const Feed = () => {
     const [books, setBooks] = useState([])
+    const [active, setActive] = useState(false)
+    const [bookDetail, setBookDetail] = useState()
 
     useEffect(() => {
         setBooks([])
@@ -20,8 +22,12 @@ const Feed = () => {
                     <Card 
                         key={book.id}
                         book={book}
+                        setActive={setActive}
+                        setBookDetail={setBookDetail}
                     />
                 ))}
+
+                <Modal book={bookDetail} active={active} handleClose={() => setActive(false)} />
             </div>
         </div>
     )

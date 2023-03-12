@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Card = ({ book }) => {
+const Card = ({ book, setActive, setBookDetail }) => {
     return (
-        <div className='bg-secondary w-[150px] p-2 rounded-[10px] shadow-card hover:bg-[rgba(255,255,255,0.8)] hover:scale-90 flex flex-col justify-between'>
+        <div 
+            className='bg-secondary w-[150px] p-2 rounded-[10px] shadow-card hover:bg-[rgba(255,255,255,0.8)] hover:scale-90 flex flex-col justify-between'
+            onClick={() => {setActive(true); setBookDetail(book)}}
+        >
             <img 
                 src={book?.volumeInfo?.imageLinks?.thumbnail}
                 alt={book?.volumeInfo?.title}
